@@ -40,7 +40,13 @@ version = (
     .replace("-beta.", "b")
     .replace("-rc.", "rc")
 )
-
+extras_require = {
+    'build': [
+        'setuptools',
+        'jupyterlab ~=3.0',
+        'jupyter-packaging ~=0.7.9',
+    ]
+}
 setup_args = dict(
     name=name,
     version=version,
@@ -53,7 +59,8 @@ setup_args = dict(
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(),
-    install_requires=[],
+    extras_require=extras_require,
+    install_requires=["jupyter-packaging"],
     zip_safe=False,
     include_package_data=True,
     python_requires=">=3.6",
