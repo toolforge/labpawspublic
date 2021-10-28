@@ -1,0 +1,2 @@
+A sucessor to https://github.com/toolforge/nbpawspublic. Adds a little button to link
+you to the "public" version of the notebook you are working on in [PAWS](https://wikitech.wikimedia.org/wiki/PAWS).
