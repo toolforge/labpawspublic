@@ -71,7 +71,10 @@
   },
   "jupyterlab": { 
     "extension": true,
-    "outputDir": "labpawspublic/labextension"
+    "outputDir": "labpawspublic/labextension",
+    "disabledExtensions": [
+      "@jupyterlab/filebrowser-extension:share-file"
+    ]
   },
   "jupyter-releaser": {
     "hooks": {
