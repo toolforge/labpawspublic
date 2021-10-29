@@ -1,32 +1,20 @@
-import {
-  IDisposable,
-} from '@lumino/disposable';
+import { IDisposable } from '@lumino/disposable';
+
+import { IFileBrowserFactory } from '@jupyterlab/filebrowser';
+
+import { Clipboard, ToolbarButton } from '@jupyterlab/apputils';
 
 import {
-  IFileBrowserFactory
-} from '@jupyterlab/filebrowser';
-
-import {
-  Clipboard,
-  ToolbarButton,
-} from '@jupyterlab/apputils';
-
-import {
-  JupyterFrontEnd, JupyterFrontEndPlugin, JupyterLab
+  JupyterFrontEnd,
+  JupyterFrontEndPlugin,
+  JupyterLab
 } from '@jupyterlab/application';
 
-import {
-  DocumentRegistry
-} from '@jupyterlab/docregistry';
+import { DocumentRegistry } from '@jupyterlab/docregistry';
 
-import {
-  NotebookPanel,
-  INotebookModel,
-} from '@jupyterlab/notebook';
+import { NotebookPanel, INotebookModel } from '@jupyterlab/notebook';
 
-import {
-    pawsPublicLinkIcon
-} from './icons';
+import { pawsPublicLinkIcon } from './icons';
 
 namespace CommandIDs {
   export const shareLink = 'filebrowser:share-main';
@@ -35,12 +23,13 @@ namespace CommandIDs {
 }
 
 class PawsPublicLinkButton
-  implements DocumentRegistry.IWidgetExtension<NotebookPanel, INotebookModel> {
-  constructor(app: JupyterFrontEnd) { 
-      this.app = app;
+  implements DocumentRegistry.IWidgetExtension<NotebookPanel, INotebookModel>
+{
+  constructor(app: JupyterFrontEnd) {
+    this.app = app;
   }
-  
-  readonly app: JupyterFrontEnd
+
+  readonly app: JupyterFrontEnd;
   /**
    * Create a new extension object.
    */
@@ -52,19 +41,18 @@ class PawsPublicLinkButton
       onClick: () => {
         const path = panel.context.path;
         const user = JupyterLab.defaultPaths.urls.hubUser;
-        window.open(`https://public.paws.wmcloud.org/User:${user}/${path}`,'_blank');
+        window.open(
+          `https://public.paws.wmcloud.org/User:${user}/${path}`,
+          '_blank'
+        );
       }
     });
     panel.toolbar.addItem('pawsPublicLink', button);
     return button;
   }
-
 }
 
-function activate(
-  app: JupyterFrontEnd,
-  factory: IFileBrowserFactory
-): void {
+function activate(app: JupyterFrontEnd, factory: IFileBrowserFactory): void {
   const { commands } = app;
   const { tracker } = factory;
 
@@ -80,17 +68,19 @@ function activate(
       }
       const user = JupyterLab.defaultPaths.urls.hubUser;
       Clipboard.copyToSystem(
-          `https://public.paws.wmcloud.org/User:${user}/${path}`);
+        `https://public.paws.wmcloud.org/User:${user}/${path}`
+      );
     },
     isVisible: () =>
-      Boolean(tracker.currentWidget &&
-      Array(tracker.currentWidget.selectedItems()).length === 1),
+      Boolean(
+        tracker.currentWidget &&
+          Array(tracker.currentWidget.selectedItems()).length === 1
+      ),
     iconClass: 'jp-MaterialIcon jp-LinkIcon',
     label: 'Copy PAWS-public Link'
   });
-      
-  app.docRegistry.addWidgetExtension('Notebook', new PawsPublicLinkButton(app));
 
+  app.docRegistry.addWidgetExtension('Notebook', new PawsPublicLinkButton(app));
 }
 const extension: JupyterFrontEndPlugin<void> = {
   activate: activate,
