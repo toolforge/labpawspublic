@@ -3,13 +3,11 @@ labpawspublic setup
 """
 import json
 import sys
-import os
 from pathlib import Path
 
 import setuptools
 
 HERE = Path(__file__).parent.resolve()
-sys.path.append(os.path.dirname(__file__))
 
 # The name of the project
 name = "labpawspublic"
@@ -19,14 +17,13 @@ lab_path = (HERE / name.replace("-", "_") / "labextension")
 # Representative files that should exist after a successful build
 ensured_targets = [
     str(lab_path / "package.json"),
-    str(lab_path / "lib/src/index.js")
+    str(lab_path / "static/style.js")
 ]
 
 labext_name = "labpawspublic"
 
 data_files_spec = [
-    ("share/jupyter/labextensions/%s" % labext_name, str(lab_path.relative_to(
-        HERE)), "**"),
+    ("share/jupyter/labextensions/%s" % labext_name, str(lab_path.relative_to(HERE)), "**"),
     ("share/jupyter/labextensions/%s" % labext_name, str("."), "install.json"),
 ]
 
@@ -39,14 +36,8 @@ version = (
     .replace("-alpha.", "a")
     .replace("-beta.", "b")
     .replace("-rc.", "rc")
-)
-extras_require = {
-    'build': [
-        'setuptools',
-        'jupyterlab ~=3.0',
-        'jupyter-packaging ~=0.7.9',
-    ]
-}
+) 
+
 setup_args = dict(
     name=name,
     version=version,
@@ -59,15 +50,14 @@ setup_args = dict(
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(),
-    extras_require=extras_require,
-    install_requires=["jupyter-packaging"],
+    install_requires=[],
     zip_safe=False,
     include_package_data=True,
     python_requires=">=3.6",
     platforms="Linux, Mac OS X, Windows",
     keywords=["Jupyter", "JupyterLab", "JupyterLab3"],
     classifiers=[
-        "License :: OSI Approved :: MIT License",
+        "License :: OSI Approved :: BSD License",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.6",
@@ -91,14 +81,12 @@ try:
     post_develop = npm_builder(
         build_cmd="install:extension", source_dir="src", build_dir=lab_path
     )
-    setup_args["cmdclass"] = wrap_installers(post_develop=post_develop,
-                                             ensured_targets=ensured_targets)
+    setup_args["cmdclass"] = wrap_installers(post_develop=post_develop, ensured_targets=ensured_targets)
     setup_args["data_files"] = get_data_files(data_files_spec)
 except ImportError as e:
     import logging
     logging.basicConfig(format="%(levelname)s: %(message)s")
-    logging.warning("Build tool `jupyter-packaging` is missing. "
-                    "Install it with pip or conda.")
+    logging.warning("Build tool `jupyter-packaging` is missing. Install it with pip or conda.")
     if not ("--name" in sys.argv or "--version" in sys.argv):
         raise e
 

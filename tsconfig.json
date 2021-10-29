@@ -13,15 +13,12 @@
     "noUnusedLocals": true,
     "preserveWatchOutput": true,
     "resolveJsonModule": true,
+    "outDir": "lib",
+    "rootDir": "src",
     "strict": true,
-    "skipLibCheck": true,
     "strictNullChecks": true,
     "target": "es2017",
-    "outDir": "lib",
-    "rootDir": "."
+    "types": []
   },
-  "include": [
-      "src/*",
-      "src/custom.d.ts",
-      "style/*"]
+  "include": ["src/*"]
 }
