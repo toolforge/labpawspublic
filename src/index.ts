@@ -42,7 +42,7 @@ class PawsPublicLinkButton
         const path = panel.context.path;
         const user = JupyterLab.defaultPaths.urls.hubUser;
         window.open(
-          `https://public.paws.wmcloud.org/User:${user}/${path}`,
+          `https://public-paws.wmcloud.org/User:${user}/${path}`,
           '_blank'
         );
       }
@@ -68,7 +68,7 @@ function activate(app: JupyterFrontEnd, factory: IFileBrowserFactory): void {
       }
       const user = JupyterLab.defaultPaths.urls.hubUser;
       Clipboard.copyToSystem(
-        `https://public.paws.wmcloud.org/User:${user}/${path}`
+        `https://public-paws.wmcloud.org/User:${user}/${path}`
       );
     },
     isVisible: () =>
