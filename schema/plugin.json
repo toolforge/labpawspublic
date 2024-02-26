@@ -1,0 +1,15 @@
+{
+  "jupyter.lab.toolbars": {
+    "Notebook": [
+      {
+        "name": "labpawspublic",
+        "command": "notebook:clear-all-cell-outputs"
+      }
+    ]
+  },
+  "title": "labpawspublic",
+  "description": "labpawspublic description",
+  "type": "object",
+  "properties": {},
+  "additionalProperties": false
+}
