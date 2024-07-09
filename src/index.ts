@@ -62,7 +62,8 @@ function activate(app: JupyterFrontEnd, factory: IFileBrowserFactory): void {
       if (!widget) {
         return;
       }
-      const path = encodeURI(widget.selectedItems().next()?.path || '');
+      const selectedItem = widget.selectedItems().next()?.value;
+      const path = encodeURI(selectedItem?.path || '');
       if (!path) {
         return;
       }
