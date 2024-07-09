@@ -23,9 +23,10 @@ description = ""
 authors = ["Chico Venancio <chicocvenancio@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.10"
 jupyterlab = "^3.6.7"
 jupyter-packaging = "^0.12.3"
+pyzmq = "^26.0.3"
 
 [tool.poetry.dev-dependencies]
 check-manifest = "^0.49"
