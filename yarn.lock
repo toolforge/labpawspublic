@@ -1000,7 +1000,7 @@
   dependencies:
     "@lumino/algorithm" "^2.0.2"
 
-"@lumino/disposable@^1.10.0", "@lumino/disposable@^1.4.0", "@lumino/disposable@^1.4.3":
+"@lumino/disposable@^1.10.0", "@lumino/disposable@^1.4.3":
   version "1.10.0"
   resolved "https://registry.npmjs.org/@lumino/disposable/-/disposable-1.10.0.tgz"
   integrity sha512-BTFu/+2pLTw6xUMMew9ZPf7XrDKGyCEnAHrp176PSMC7kcZUao/8ncx3vw/gqBDHDvzq061ZaQ8iPRt8AJfxGA==
