@@ -158,31 +158,31 @@
     y-protocols "^1.0.5"
     yjs "^13.5.40"
 
-"@jupyterlab/application@^3.1.0":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@jupyterlab/application/-/application-3.2.1.tgz#1ac2eaea07a2968201cdbc47c53f38afbe2e0ef8"
-  integrity sha512-5+mL1w7bomKr0TmXYazsOkVVjaejoYBHca9w6TueHZSUtev0lvGdJJZKKKhhzsnm49bN3Nay4VLLM0Cv1LHR9Q==
+"@jupyterlab/application@^4.2.3":
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/@jupyterlab/application/-/application-4.2.3.tgz#a9c3169c5151ef6ad5edaf09fa6ad5e5e9f3bf99"
+  integrity sha512-bdA4Vpx+GRnN+P/lnEiZyXcEmsvYCSwqXoayU3RmyA+ycOtV/yeQgpDI/dRYt+Ysiq6gkFJmqEPhooU32nDugg==
   dependencies:
     "@fortawesome/fontawesome-free" "^5.12.0"
-    "@jupyterlab/apputils" "^3.2.1"
-    "@jupyterlab/coreutils" "^5.2.1"
-    "@jupyterlab/docregistry" "^3.2.1"
-    "@jupyterlab/rendermime" "^3.2.1"
-    "@jupyterlab/rendermime-interfaces" "^3.2.1"
-    "@jupyterlab/services" "^6.2.1"
-    "@jupyterlab/statedb" "^3.2.1"
-    "@jupyterlab/translation" "^3.2.1"
-    "@jupyterlab/ui-components" "^3.2.1"
-    "@lumino/algorithm" "^1.3.3"
-    "@lumino/application" "^1.16.0"
-    "@lumino/commands" "^1.12.0"
-    "@lumino/coreutils" "^1.5.3"
-    "@lumino/disposable" "^1.4.3"
-    "@lumino/messaging" "^1.4.3"
-    "@lumino/polling" "^1.3.3"
-    "@lumino/properties" "^1.2.3"
-    "@lumino/signaling" "^1.4.3"
-    "@lumino/widgets" "^1.19.0"
+    "@jupyterlab/apputils" "^4.3.3"
+    "@jupyterlab/coreutils" "^6.2.3"
+    "@jupyterlab/docregistry" "^4.2.3"
+    "@jupyterlab/rendermime" "^4.2.3"
+    "@jupyterlab/rendermime-interfaces" "^3.10.3"
+    "@jupyterlab/services" "^7.2.3"
+    "@jupyterlab/statedb" "^4.2.3"
+    "@jupyterlab/translation" "^4.2.3"
+    "@jupyterlab/ui-components" "^4.2.3"
+    "@lumino/algorithm" "^2.0.1"
+    "@lumino/application" "^2.3.1"
+    "@lumino/commands" "^2.3.0"
+    "@lumino/coreutils" "^2.1.2"
+    "@lumino/disposable" "^2.1.2"
+    "@lumino/messaging" "^2.0.1"
+    "@lumino/polling" "^2.1.2"
+    "@lumino/properties" "^2.0.1"
+    "@lumino/signaling" "^2.1.2"
+    "@lumino/widgets" "^2.3.2"
 
 "@jupyterlab/apputils@^3.1.0", "@jupyterlab/apputils@^3.2.1":
   version "3.2.1"
@@ -675,22 +675,13 @@
     "@lumino/widgets" "^1.19.0"
     resize-observer-polyfill "^1.5.1"
 
-"@jupyterlab/rendermime-interfaces@^3.10.3":
+"@jupyterlab/rendermime-interfaces@^3.10.3", "@jupyterlab/rendermime-interfaces@^3.2.1":
   version "3.10.3"
   resolved "https://registry.yarnpkg.com/@jupyterlab/rendermime-interfaces/-/rendermime-interfaces-3.10.3.tgz#84c742244516e27c54e0925d1c522839833665c5"
   integrity sha512-Zjny2rZw7wuFrCi4fbESLKWU1M2GQ//O9dBFZxjc3d4dOjT0nQ48VTp1ThFVphMr9EOhAgvTJzNFBbhel49ERw==
   dependencies:
     "@lumino/coreutils" "^1.11.0 || ^2.1.2"
     "@lumino/widgets" "^1.37.2 || ^2.3.2"
-
-"@jupyterlab/rendermime-interfaces@^3.2.1":
-  version "3.2.1"
-  resolved "https://registry.npmjs.org/@jupyterlab/rendermime-interfaces/-/rendermime-interfaces-3.2.1.tgz"
-  integrity sha512-5xCYoRwZNiz8tyFB6qJQvFWTVy8zLgJFXLIzu2K6jR89mXstzIKYU6BsC8NYUbEx51rxWUuSKCuhT5YoqKgdug==
-  dependencies:
-    "@jupyterlab/translation" "^3.2.1"
-    "@lumino/coreutils" "^1.5.3"
-    "@lumino/widgets" "^1.19.0"
 
 "@jupyterlab/rendermime@^3.2.1":
   version "3.2.1"
@@ -948,6 +939,15 @@
     "@lumino/coreutils" "^1.11.0"
     "@lumino/widgets" "^1.29.0"
 
+"@lumino/application@^2.3.1":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@lumino/application/-/application-2.4.0.tgz#ff1996b2e6c4be123bdbc951a54266eeacdc1ad7"
+  integrity sha512-OJigzztfhJFQ+pyZ5+1TWQ0iBUOl98VHd/A2cgSS37sVM1F+dm5rISv2JSnpnQN1ffSlmBkhrLByZeLsfMBizg==
+  dependencies:
+    "@lumino/commands" "^2.3.1"
+    "@lumino/coreutils" "^2.2.0"
+    "@lumino/widgets" "^2.4.0"
+
 "@lumino/collections@^1.9.0":
   version "1.9.0"
   resolved "https://registry.npmjs.org/@lumino/collections/-/collections-1.9.0.tgz"
@@ -1141,7 +1141,7 @@
     "@lumino/signaling" "^1.10.0"
     "@lumino/virtualdom" "^1.14.0"
 
-"@lumino/widgets@^1.37.2 || ^2.3.2", "@lumino/widgets@^2.3.2":
+"@lumino/widgets@^1.37.2 || ^2.3.2", "@lumino/widgets@^2.3.2", "@lumino/widgets@^2.4.0":
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/@lumino/widgets/-/widgets-2.4.0.tgz#1516036f75840660bd84b3189acaedf49345a0b8"
   integrity sha512-n7MqRKj+g/aRnI3dl4EJw/Bkt5/LSwGcn3sA9opn88CMZmAzjC33ac+q6zijovjCX8yDud7KKK8yPFTwOFaxhg==
