@@ -55,9 +55,9 @@
     "@jupyterlab/builder": "^4.2.3",
     "@typescript-eslint/eslint-plugin": "^4.8.1",
     "@typescript-eslint/parser": "^4.8.1",
-    "eslint": "^7.14.0",
+    "eslint": "^9.6.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.1.3", 
+    "eslint-plugin-prettier": "^5.1.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.3.2",
     "rimraf": "^6.0.0",
@@ -69,7 +69,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "jupyterlab": { 
+  "jupyterlab": {
     "extension": true,
     "outputDir": "labpawspublic/labextension",
     "disabledExtensions": [
@@ -83,5 +83,6 @@
         "jlpm"
       ]
     }
-  }
+  },
+  "packageManager": "yarn@4.3.1"
 }
