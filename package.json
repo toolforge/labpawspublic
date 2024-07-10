@@ -1,6 +1,6 @@
 {
     "name": "labpawspublic",
-    "version": "0.1.0",
+    "version": "1.1.0",
     "description": "jupyterlab extension to add paws-public links",
     "keywords": [
         "jupyter",
