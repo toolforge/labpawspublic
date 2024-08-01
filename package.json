@@ -57,7 +57,7 @@
         "@jupyterlab/application": "^4.2.3",
         "@jupyterlab/apputils": "^4.3.3",
         "@jupyterlab/docregistry": "^4.2.3",
-        "@jupyterlab/filebrowser": "^4.2.3",
+        "@jupyterlab/filebrowser": "^4.2.4",
         "@jupyterlab/notebook": "^4.2.3",
         "@lumino/disposable": "^2.0.0"
     },
